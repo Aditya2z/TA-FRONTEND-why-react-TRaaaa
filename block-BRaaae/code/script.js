@@ -1,35 +1,11 @@
-import React from "react";
-import { ReactDOM } from "react";
 let input = document.querySelector("input[type=text]");
 let submitButton = document.querySelector("input[type=submit]");
 let root = document.querySelector(".root");
 let movieArray = [];
 
-function elm(type, attribute = {}, ...children) {
-  let element = document.createElement(type);
-  for (let key in attribute) {
-    if (key.startsWith("data-")) {
-      element.setAttribute(key, attribute[key]);
-    } else {
-      element[key] = attribute[key];
-    }
-  }
-  children.forEach((child) => {
-    if (typeof child === "object") {
-      element.append(child);
-    }
-    if (typeof child === "string") {
-      let node = document.createTextNode(child);
-      element.append(node);
-    }
-  });
-  return element;
-}
-
-function addMovie(event) { // Added event parameter
+function addMovie(event) {
   if ((event.keyCode === 13 || event.type === "click") && input.value) {
     let newMovie = {};
-    newMovie.id = Date.now();
     newMovie.name = input.value;
     newMovie.watched = false;
     movieArray.push(newMovie);
@@ -39,26 +15,26 @@ function addMovie(event) { // Added event parameter
 }
 
 function displayMovieList() {
-  root.innerHTML = "";
-  movieArray.forEach((movie, index) => {
+  let UI = movieArray.map((movie, index) => {
     if(movie.watched) {
       watched = "watched";
     } else {
       watched = "";
     }
-    let card = elm(
+    let card = React.createElement(
       "li",
-      { id: index },
-      elm("p", null, movie.name),
-      elm("button", { className: `watchBtn ${watched}`}, movie.watched ? "Watched" : "To Watch")
+      { "key": index, "data-id" : index },
+      React.createElement("p", null, movie.name),
+      React.createElement("button", { className: `watchBtn ${watched}`}, movie.watched ? "Watched" : "To Watch")
     );
-    root.append(card);
+    return card;
   });
+  ReactDOM.render(UI, root);
 }
 
 function watchToggle(event) {
   if (event.target.classList.contains("watchBtn")) {
-    var index = event.target.parentElement.getAttribute("id");
+    var index = event.target.parentElement.getAttribute("data-id");
     movieArray[index].watched = !movieArray[index].watched;
     event.target.innerText = movieArray[index].watched ? "Watched" : "To Watch";
     event.target.classList.toggle("watched");
