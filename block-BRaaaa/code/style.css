@@ -1,0 +1,230 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Container styling */
+.container {
+  max-width: 800px;
+  margin: 20px auto; /* Added some top margin for spacing */
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8; /* Added background color */
+  border: 1px solid #ddd; /* Added border */
+  border-radius: 4px;
+}
+
+/* Header styling */
+h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Text input styling */
+input[type="text"] {
+  width: 70%; /* Reduced width to make space for the button */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Button hover effect */
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* List styling for movies */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual movie card */
+li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Movie name text */
+p {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  flex-grow: 1;
+}
+
+/* Watched button styling */
+button.watchBtn {
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Watched button hover effect */
+button.watchBtn:hover {
+  background-color: #f44336;
+}
+
+/* Watched button when clicked */
+button.watchBtn.watched {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Watched button text when clicked */
+.watchBtn.watched::after {
+  content: "Watched";
+}
+
+/* Watched button text when not clicked */
+.watchBtn:not(.watched)::after {
+  content: "To-Watch";
+}
