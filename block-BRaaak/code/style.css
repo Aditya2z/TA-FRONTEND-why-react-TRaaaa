@@ -1,0 +1,103 @@
+.root {
+    width: 80%;
+    margin: 0 auto;
+}
+/* Style the article container */
+article {
+    width: 30%;
+    display: flex;
+    margin: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Add relative positioning to the article */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Style the figure element */
+figure {
+    margin: 0;
+    padding: 0;
+    position: relative; /* Add relative positioning to the figure */
+}
+
+/* Style the image inside the figure */
+img {
+    max-width: 100%;
+    min-height: 200px;
+    height: auto;
+}
+
+/* Style the date circle */
+.circle {
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    position: absolute; /* Position the circle absolutely */
+    top: 10px; /* Adjust top position to place it at the top */
+    right: 10px; /* Adjust right position to place it at the top-right corner */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the category label */
+.rec {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 20px;
+    position: absolute; /* Position the "rec" label absolutely */
+    bottom: 4px; /* Adjust bottom position to place it at the bottom */
+    left: 0px; /* Adjust left position to place it at the bottom-left corner */
+    z-index: 1; /* Ensure it's on top of the image */
+}
+
+/* Style the article content */
+div {
+    padding: 20px;
+}
+
+/* Style the article title */
+h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+/* Style the subtitle */
+h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #777;
+}
+
+/* Style the description text */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Style the timestamp and comments */
+span {
+    font-size: 14px;
+    color: #777;
+    margin-right: 20px;
+}
+
+/* Style the icons */
+span::before {
+    margin-right: 5px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
