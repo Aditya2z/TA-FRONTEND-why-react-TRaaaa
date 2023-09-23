@@ -5,3 +5,4 @@
 - All the props that a component accepts should be validated
 
 [Typechecking With PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
+//done
