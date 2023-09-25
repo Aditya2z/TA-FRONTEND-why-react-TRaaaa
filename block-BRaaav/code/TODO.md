@@ -8,4 +8,6 @@
 - Try making components small
 - You can copy stylesheet and HTML (convert into React)
 
+//done
+
 
