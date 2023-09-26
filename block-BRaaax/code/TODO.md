@@ -34,9 +34,16 @@
   type="tertiary"
   onClickHandler={() => alert("You Clicked Me!")}
 />
+// my code
+function Button(props) {
+  return <button className = {props.size props.type} disabled = {props.disabled}>{props.label}</button>;
+}
 
 ```
 
 ### Demo
 
 ![Button Display](https://github.com/nnnkit/react-tasks/raw/master/button-types/buttons.png)
+
+//done
+
