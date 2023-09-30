@@ -1,0 +1,105 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* custom */
+
+/* Style the overall container */
+section {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* Vertically center items */
+  }
+  
+  /* Style the color category header */
+  aside {
+    font-weight: bold;
+    margin-right: 10px;
+    width: 50px;
+    text-align: center;
+  }
+  
+  /* Style the color block container */
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* Allow color blocks to wrap to the next line */
+    gap: 10px; /* Add spacing between color blocks */
+  }
+  
+  /* Style the individual color block */
+  .box {
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Add rounded corners */
+    overflow: hidden; /* Hide overflowing content */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding: 10px; /* Add some padding for spacing */
+    transition: transform 0.2s ease-in-out; /* Add a subtle hover effect */
+    cursor: pointer; /* Change cursor on hover */
+  }
+  
+  /* Style the color block dimensions */
+  .box {
+    width: 75px;
+    height: 75px; /* Adjust the height for a square shape */
+  }
+  
+  /* Style the text inside the color block */
+  .box span {
+    font-size: 12px;
+    margin-top: 5px;
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+  
+  /* Add a hover effect */
+  .box:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+  }
+  
